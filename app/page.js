@@ -1,112 +1,262 @@
+'use client'
 import Image from 'next/image'
+import BMICalculator from './components/Calculator'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main className="bg-white min-h-screen font-inter">
+      <div className='relative flex flex-col xl:flex-row xl:ml-[24px] xl:mr-[140px] border-8 w-full'>
+          <div className="bg-gradient-to-r from-[#d6fcfe] to-[#D6E6FE] xl:h-[737px] xl:w-[70%] rounded-b-[35px] h-[640px]">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+            className="mx-auto my-auto xl:mt-[75px] xl:ml-[116px] mt-8 mb-6"
+            src="/images/logo.svg"
+            alt="app logo"
+            width={40}
+            height={40}
             />
-          </a>
+            <div className="font-inter xl:ml-[116px] xl:mr-[0px] xl:mt-[127px] border xl:pr-60 ">
+              <div className="font-semibold xl:text-6xl text-5xl text-center xl:text-start mx-6 xl:mx-0 xl:my-0 xl:mr-20 md:mx-48 md:mt-10  border">
+                  <p className="mb-0">
+                    Body Mass Index Calculator
+                  </p>
+              </div>
+              <div className="xl:w-[456px] xl:mt-[35px] xl:mx-0 xl:text-start text-base text-center border font-normal m-6 md:mx-11 text-[#5E6E85]">
+                <p>
+                  Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
+                </p>
+              </div>
+            </div>
+          </div>
+           <BMICalculator />
+      </div>
+
+      <div className="md:grid grid-cols-2 xl:flex mt-[580px] md:mr-10 xl md:mt-[350px] overflow-visible xl:mx-[140px] xl:mt-[70px] border">
+        <div className='md:relative md:right-20 xl:static border xl:w-[564px]'>
+          <Image
+            className=" border"
+            src="/images/image-man-eating.webp"
+            alt="man eating"
+            width={564}
+            height={533}
+          />
+        </div>
+
+        <div className='mt-12 md:my-0 mx-6 xl:mt-0 md:mx-0 xl:ml-[120px] xl:w-[465px] border'>
+          <Image
+            className="ml-auto xl:block hidden xl:relative bottom-[10%] left-[0%]"
+            src="/images/pattern-curved-line-left.svg"
+            alt="curved pattern"
+            width={60}
+            height={60}
+          />
+          <div className='md:my-8 lg:mt-20 xl:my-0 border xl:relative bottom-[5%]'>
+            <div className='font-semibold xl:text-[48px] text-3xl mb-8 xl:leading-tight xl:tracking-[-2.4px]'>
+               <p>What your BMI result means</p>
+            </div>
+            <div className='text-base font-normal text-[#5E6E85] border'>
+              <p>
+                A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="xl:rounded-[35px] bg-gradient-to-br  from-white to-[#D6E6FE] bg-opacity-25 xl:pt-[72px] pt-14 pl-5 pr-7 pb-14 xl:pb-[96px] xl:px-[116px] xl:mt-[96px]  mt-16 xl:mx-[24px]  xl:flex">
+        <div className='border xl:flex-col md:flex'>
+          <Image
+              className=""
+              src="/images/icon-eating.svg"
+              alt="eating icon"
+              width={64}
+              height={64}
+          />
+          <div className='md:ml-10 xl:ml-0'>
+            <p className='xl:pt-[0px] xl:pb-[0px] font-semibold text-2xl mt-8 border'>Healthy eating</p>
+            <p className='mt-6 text-[#5E6E85] text-base'>Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
+          </div>
+        </div>
+
+        <div className='xl:px-[0px] xl:mt-0 mt-10 md:flex xl:flex-col xl:ml-8 border'>
+          <Image
+              className=""
+              src="/images/icon-exercise.svg"
+              alt="icon exercise"
+              width={64}
+              height={64}
+          />
+          <div className='md:ml-10 xl:ml-0'>
+            <p className='xl:pt-[0px] xl:pb-[0px]  font-semibold text-2xl mt-8'>Regular exercise</p>
+            <p className='mt-6 text-base border text-[#5E6E85]'>Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
+          </div>
+        </div>
+
+        <div className='mt-10 xl:mt-0 border md:flex xl:flex-col  xl:ml-8'>
+          <Image
+              className=""
+              src="/images/icon-sleep.svg"
+              alt="icon sleep"
+              width={64}
+              height={64}
+          />
+          <div className='md:ml-10 xl:ml-0'>
+            <p className='xl:pt-[0px] xl:pb-[0px] font-semibold text-2xl mt-8'>Adequate sleep</p>
+            <p className='mt-6 text-[#5E6E85] text-base'>Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+          </div>
+        </div>
+    
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className='xl:m-[140px] xl:px-0 pl-[19px] pr-[29px] md:px-10 border'>
+        <div className='xl:flex'>
+          <div className='xl:mr-[140px] border'>
+            <p className='font-semibold xl:text-[48px] text-3xl xl:text-start text-center border mt-[72px] xl:mt-0 mb-8 xl:mb-[35px]'>Limitations of BMI</p>
+            <p className='text-base text-[#5e6e85] xl:text-start text-center'>Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.</p>
+          </div>
+          <div className='md:grid grid-cols-2 xl:flex xl:mr-20 border md:mt-14 xl:mt-0 border'>
+              <div className='xl:p-8 p-6 round-[16px] md:mr-4 xl:mr-[0px] md:mt-0 mt-14 shadow-[16px_15px_32px_0px_rgba(143,174,207,0.25)] rounded-[16px]'>
+                <div className='flex'>
+                  <Image
+                    className=""
+                    src="/images/icon-gender.svg"
+                    alt="icon gender"
+                    width={32}
+                    height={32}
+                  />
+                  <div>
+                    <p className='text-xl font-semibold pl-[16px]'>Gender</p>
+                  </div>
+                </div>
+                <div >
+                  <p className='text-base pt-[16px] text-[#5E6E85]'>The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.</p>
+                </div>
+              </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              <div className='hidden xl:hidden md:grid shadow-[16px_5px_56px_0px_rgba(143,174,207,0.25)] xl:p-[32px]  p-6 xl:mt-[32px] xl:mr-[32px] rounded-[16px] border'>
+                <div className=''>
+                    <div className='flex'>
+                      <Image
+                        className=""
+                        src="/images/icon-age.svg"
+                        alt="icon age"
+                        width={32}
+                        height={32}
+                      />
+                      <div>
+                        <p className='text-xl font-semibold pl-[16px]'>Age</p>
+                      </div>
+                    </div>
+                    <p className='text-base mt-4 text-[#5E6E85] border'>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
+                </div>
+              </div>
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className='xl:flex xl:overflow-visible mt-4 md:mt-6 xl:mt-8  border'>
+          <div className=''>
+              <Image
+                className="xl:block hidden mb-[0px]  ml-[150px] mr-[170px]"
+                src="/images/pattern-curved-line-right.svg"
+                alt="icon gender"
+                width={94}
+                height={122}
+              />
+          </div>
+          <div className='md:hidden xl:block shadow-[16px_5px_56px_0px_rgba(143,174,207,0.25)] xl:p-[32px] p-6  xl:mt-[0px] xl:mr-[32px] rounded-[16px] border'>
+            <div className=''>
+                <div className='flex'>
+                  <Image
+                    className=""
+                    src="/images/icon-age.svg"
+                    alt="icon age"
+                    width={32}
+                    height={32}
+                  />
+                  <div>
+                    <p className='text-xl font-semibold pl-[16px]'>Age</p>
+                  </div>
+                </div>
+                <p className='text-base mt-4 text-[#5E6E85] border'>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className='xl:flex md:grid grid-cols-2 gap-4'>
+            <div className='xl:p-[32px] p-6 xl:mt-[0px] mt-4 md:mt-0 shadow-[16px_5px_56px_0px_rgba(143,174,207,0.25)] rounded-[16px]'>
+              <div className='flex'>
+                <Image
+                  className=""
+                  src="/images/icon-muscle.svg"
+                  alt="icon muscle"
+                  width={32}
+                  height={32}
+                />
+                <div>
+                  <p className='text-xl font-semibold pl-[16px]'>Muscle</p>
+                </div>
+              </div>
+              <div >
+                <p className='text-base mt-4 text-[#5E6E85] '>BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</p>
+              </div>
+            </div>
+
+            <div className='xl:hidden hidden md:block xl:p-[32px] p-6 shadow-[16px_5px_56px_0px_rgba(143,174,207,0.25)] rounded-[16px]'>
+              <div className='flex'>
+                <Image
+                  className=""
+                  src="/images/icon-pregnancy.svg"
+                  alt="icon race"
+                  width={32}
+                  height={32}
+                />
+                <div>
+                  <p className='text-xl font-semibold pl-[16px]'>Pregnancy</p>
+                </div>
+              </div>
+              <div >
+                <p className='text-base pt-4 text-[#5E6E85]'>Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='xl:flex xl:mt-[40px] mt-4 xl:mr-[140px] xl:mx-[140px] border md:m-auto'>
+            <div className='md:hidden xl:block xl:w-[50%] xl:p-[32px] p-6 shadow-[16px_5px_56px_0px_rgba(143,174,207,0.25)] rounded-[16px]'>
+              <div className='flex'>
+                <Image
+                  className=""
+                  src="/images/icon-pregnancy.svg"
+                  alt="icon race"
+                  width={32}
+                  height={32}
+                />
+                <div>
+                  <p className='text-xl font-semibold pl-[16px]'>Pregnancy</p>
+                </div>
+              </div>
+              <div >
+                <p className='text-base pt-4 text-[#5E6E85]'>Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
+              </div>
+            </div>
+
+            <div className='md:w-[50%] xl:p-[32px] p-6  round-[16px] md:mt-6 xl:mt-0 mt-4 mb-24 xl:mb-0 shadow-[16px_32px_32px_0px_rgba(143,174,207,0.25)] rounded-[16px] xl:ml-[32px] mx-auto  border'>
+              <div className='flex'>
+                <Image
+                  className=""
+                  src="/images/icon-race.svg"
+                  alt="icon gender"
+                  width={32}
+                  height={32}
+                />
+                <div>
+                  <p className='text-xl font-semibold pl-[16px]'>Race</p>
+                </div>
+              </div>
+              <div >
+                <p className='text-base pt-4 text-[#5E6E85]'>Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse.</p>
+              </div>
+            </div>
+        </div>
+
       </div>
     </main>
   )
