@@ -63,12 +63,12 @@ const getIdealWeightRange = () => {
 
 
   return (
-    <div className="absolute xl:top-[0%] xl:left-[50%] top-[70%] md:top-[55%] xl:right-2  mx-6 xl:mr-36 md:mx-11 border-4 xl:mt-[166px] bg-white xl:px-8 xl:pt-4 xl:pb-8 p-6 md:p-8 rounded-2xl shadow-[16px_32px_56px_0px_rgba(143,174,207,0.25)]">
+    <div className="absolute xl:top-[0%] xl:left-[50%] top-[70%] md:top-[55%] xl:right-2  mx-6 xl:mr-36 md:mx-11 xl:mt-[166px] bg-white xl:px-8 xl:pt-4 xl:pb-8 p-6 md:p-8 rounded-2xl shadow-[16px_32px_56px_0px_rgba(143,174,207,0.25)]">
 
-      <p className='font-semibold text-2xl mb-8 border'>Enter your details below</p>
+      <p className='font-semibold text-2xl mb-8'>Enter your details below</p>
       
-      <div className='border flex'>
-        <div className='w-full border'>
+      <div className='flex'>
+        <div className='w-full'>
           <label className={styles.container}>
             <input
               type="radio"
@@ -91,7 +91,7 @@ const getIdealWeightRange = () => {
               onChange={() => handleUnitChange('imperial')}
             />
             <span className={styles.checkmark}></span>
-            <span className='border ml-11 text-base font-semibold'>Imperial</span>
+            <span className='ml-11 text-base font-semibold'>Imperial</span>
           </label>
         </div>  
       </div>
@@ -100,7 +100,7 @@ const getIdealWeightRange = () => {
         {unit === 'metric' ? (
           <>
             <div className='md:flex'>
-              <div className="mb-4 w-full relative border md:mr-6">
+              <div className="mb-4 w-full relative md:mr-6">
                 <p className="text-sm text-[#5E6E85] mb-[8px]">Height</p> 
                 <input
                     type="text"
@@ -144,7 +144,7 @@ const getIdealWeightRange = () => {
                     type="text"
                     placeholder="0"
                     className="p-5 border rounded-[12px] w-[100%] text-2xl focus:border-blue-500 hover:border-blue-500 focus:outline-none"
-                    onKeyDown={h}
+                    onKeyDown={handleNumericInput}
                     onChange={(e) => setHeight({ ...height, inches: e.target.value })}
                 />
                  <span className="absolute right-[20px] top-[20px] xl:right-[20px] xl:top-[22px] text-[#345FF6] font-semibold text-2xl">in</span> 
@@ -190,10 +190,10 @@ const getIdealWeightRange = () => {
         ) : (
           <div className='md:flex text-white'>
             <div className='md:w-full md:mr-6'>
-              <p className='text-base leading-6 border font-semibold'>Your BMI is ...</p>
-              <p className='xl:text-6xl text-5xl border'>{bmi}</p>
+              <p className='text-base leading-6 font-semibold'>Your BMI is ...</p>
+              <p className='xl:text-6xl text-5xl '>{bmi}</p>
             </div>
-            <p className='xl:ml-[24px]  text-sm xl:w-[206px] mt-6 md:mt-0 md:py-2 border'>
+            <p className='xl:ml-[24px]  text-sm xl:w-[206px] mt-6 md:mt-0 md:py-2'>
               Your BMI suggests you’re {getBMICategory(bmi)}. Your ideal weight is between <span className='font-semibold'>{getIdealWeightRange()}.</span>
             </p>
           </div>

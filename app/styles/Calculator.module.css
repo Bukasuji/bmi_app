@@ -9,7 +9,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 1px solid red;
   }
 
   .container_imperial {
@@ -21,7 +20,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 1px solid red;
   }
   
   /* Hide the browser's default radio button */
