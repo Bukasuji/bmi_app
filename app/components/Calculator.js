@@ -63,7 +63,7 @@ const getIdealWeightRange = () => {
 
 
   return (
-    <div className="absolute xl:top-[0%] xl:left-[50%] top-[70%] md:top-[55%] xl:right-2  mx-6 xl:mr-36 md:mx-11 xl:mt-[166px] bg-white xl:px-8 xl:pt-4 xl:pb-8 p-6 md:p-8 rounded-2xl shadow-[16px_32px_56px_0px_rgba(143,174,207,0.25)]">
+    <div className="absolute xl:top-[0%] xl:left-[50%] top-[70%] max-[280px]:top-[85%] md:top-[55%] xl:right-2  mx-6 max-[280px]:mx-auto  xl:mr-36 md:mx-11 xl:mt-[166px] bg-white xl:px-8 xl:pt-4 xl:pb-8 p-6 md:p-8 rounded-2xl shadow-[16px_32px_56px_0px_rgba(143,174,207,0.25)]">
 
       <p className='font-semibold text-2xl mb-8'>Enter your details below</p>
       
@@ -100,7 +100,7 @@ const getIdealWeightRange = () => {
         {unit === 'metric' ? (
           <>
             <div className='md:flex'>
-              <div className="mb-4 w-full relative md:mr-6">
+              <div className="mb-4 w-full relative md:mr-6 mt-8 border">
                 <p className="text-sm text-[#5E6E85] mb-[8px]">Height</p> 
                 <input
                     type="text"
@@ -112,7 +112,7 @@ const getIdealWeightRange = () => {
                 <span className="absolute right-[20px] top-[45px] text-[#345FF6] font-semibold text-2xl">cm</span>  
               </div> 
 
-              <div className="mt-0 relative w-full">
+              <div className="mt-8 border relative w-full">
                 <p className="text-sm text-[#5E6E85] mb-[8px]">Weight</p> 
                 <input
                     type="text"
@@ -179,7 +179,9 @@ const getIdealWeightRange = () => {
         )}
       </div>
 
-      <button className= 'bg-[#345FF6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4' onClick={calculateBMI}>Calculate BMI</button>
+      <button className='bg-[#345FF6] hover:bg-blue-700 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded mb-4'>
+              Calculate BMI
+      </button>
 
       <div className='bg-[#345FF6] p-8 rounded-2xl md:rounded-16-full-16'>
         {showWelcomeMessage ? (
