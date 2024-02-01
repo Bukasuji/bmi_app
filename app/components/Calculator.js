@@ -100,7 +100,7 @@ const getIdealWeightRange = () => {
         {unit === 'metric' ? (
           <>
             <div className='md:flex'>
-              <div className="mb-4 w-full relative md:mr-6 mt-8 border">
+              <div className="mb-4 w-full relative md:mr-6 mt-8">
                 <p className="text-sm text-[#5E6E85] mb-[8px]">Height</p> 
                 <input
                     type="text"
@@ -112,7 +112,7 @@ const getIdealWeightRange = () => {
                 <span className="absolute right-[20px] top-[45px] text-[#345FF6] font-semibold text-2xl">cm</span>  
               </div> 
 
-              <div className="mt-8 border relative w-full">
+              <div className="mt-8 relative w-full">
                 <p className="text-sm text-[#5E6E85] mb-[8px]">Weight</p> 
                 <input
                     type="text"
